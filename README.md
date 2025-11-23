@@ -64,21 +64,6 @@ I'm passionate about uncovering the "why" behind how things work — from comple
 - 🔍 Always curious about how things work behind the scenes
 - 💭 Believe in the power of creative problem-solving
 
-## 🐍 Contribution Snake
-
-![snake gif](https://github.com/Mido-77/Mido-77/blob/output/github-contribution-grid-snake.svg)
-
-
-## 🎮 GitHub Activity Games
-
-### Snake Game
-![Snake](https://github.com/Mido-77/Mido-77/blob/output/github-contribution-grid-snake.svg)
-
-### 3D Contribution Chart  
-![3D Chart](https://github.com/Mido-77/Mido-77/blob/output/3d-chart.svg)
-
-### Tetris
-![Tetris](https://github.com/Mido-77/Mido-77/blob/output/tetris.svg)
 
 ### Pacman
 ![Pacman](https://github.com/Mido-77/Mido-77/blob/output/pacman.svg)
