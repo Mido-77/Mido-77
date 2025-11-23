@@ -1,41 +1,40 @@
-# Hi, I'm Mido 👋
+# 👋 Hi, I'm Mohamed Tarek (Mido)
 
-I’m a Computer Engineering student with a passion for AI, Machine Learning, and creative tech. I'm always chasing the “why” behind how things work — whether it’s algorithms, systems, patterns in data, or human behavior.
+**AI/ML Enthusiast | Creative Technologist | Computer Engineering Student**
 
-I'm currently building my foundation in ML algorithms, data structures, and intelligent systems, and I’m exploring creative paths like video production, storytelling, design, and music. I love mixing technical skills with creativity to make things that actually mean something.
+I'm passionate about uncovering the "why" behind how things work — from complex algorithms and data patterns to human behavior and creative systems. I blend technical expertise with creative thinking to build meaningful solutions.
 
-I’m open to internships, collaborations, and cool tech projects — especially anything involving AI/ML, automation, full-stack dev, or digital creativity.
+## 🚀 About Me
 
---------------------------
-## 🌐 Socials
+- 🎓 **Computer Engineering Student** with focus on AI & Machine Learning
+- 🧠 Currently building foundation in **ML algorithms & data structures**
+- 🎨 Exploring **creative tech** - video production, storytelling, design & music
+- 💡 Passionate about **AI/ML, automation, full-stack development & digital creativity**
+- 🔍 Seeking **internships & collaborations** on innovative tech projects
 
-📷 Instagram
- • 💼 [LinkedIn](www.linkedin.com/in/mohamed-tarek-essam-b89352282)
- • 📧 [Email](mohamed1.essam4@gmail.com)
+## 🛠️ Tech Stack
 
---------
+**Languages & Technologies I Work With:**
 
-💻 Tech Stack
+| Category | Technologies |
+|----------|--------------|
+| **Programming** | Python, Java, C++, JavaScript |
+| **AI/ML** | TensorFlow, PyTorch, Scikit-learn, Pandas |
+| **Web Dev** | React, Node.js, HTML/CSS, MongoDB |
+| **Tools** | Git, Docker, VS Code, Jupyter Notebook |
 
+## 📫 Let's Connect
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/mohamed-tarek-essam-b89352282)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mohamed1.essam4@gmail.com)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/yourusername)
 
+## 📈 GitHub Stats
 
+![Mido's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Mido-77&show_icons=true&theme=radical)
 
------------------
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mido-77&layout=compact&theme=radical)
+
+## 🐍 Contribution Snake
+
 ![snake gif](https://github.com/Mido-77/Mido-77/blob/output/github-contribution-grid-snake.svg)
-
-
-<!--
-**Mido-77/Mido-77** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
