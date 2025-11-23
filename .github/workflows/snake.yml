@@ -1,4 +1,4 @@
-name: Snake Animation
+name: Multiple Animations
 
 on:
   schedule:
@@ -6,24 +6,36 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
-      
-      - name: Generate snake
-        run: |
-          pip install snk
-          snk -u Mido-77 -f github-contribution-grid-snake.svg
-          mkdir -p dist
-          mv github-contribution-grid-snake.svg dist/
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      # Snake
+      - name: Generate Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Mido-77
+          outputs: dist/github-contribution-grid-snake.svg
+          
+      # 3D Chart
+      - name: Generate 3D Chart
+        uses: yoshi389111/github-profile-3d-contrib@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          github_user_name: Mido-77
+          
+      # Tetris
+      - name: Generate Tetris
+        uses: denvercoder1/github-readme-tetris-stats@main
+        with:
+          github_user_name: Mido-77
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
           publish_branch: output
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          publish_dir: dist
