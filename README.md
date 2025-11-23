@@ -13,12 +13,16 @@ I’m open to internships, collaborations, and cool tech projects — especially
  • 💼 [LinkedIn](www.linkedin.com/in/mohamed-tarek-essam-b89352282)
  • 📧 [Email](mohamed1.essam4@gmail.com)
 
+--------
+
+💻 Tech Stack
 
 
 
 
-![snake gif](https://github.com/<your-username>/<Mido-77>/blob/output/github-contribution-grid-snake.svg)
 
+-----------------
+![snake gif](https://github.com/Mido-77/Mido-77/blob/output/github-contribution-grid-snake.svg)
 
 
 <!--
