@@ -65,12 +65,11 @@ I'm passionate about uncovering the "why" behind how things work — from comple
 - 💭 Believe in the power of creative problem-solving
 
 
-## 🎮 Pacman Activity
+## 🎮 Pacman Animation
 
-![Pacman eating my contributions](https://github.com/Mido-77/Mido-77/blob/output/pacman.svg)
+![Pacman eating my contributions](https://raw.githubusercontent.com/Mido-77/Mido-77/main/github-metrics.svg)
 
-
----
+![Pacman](https://raw.githubusercontent.com/Mido-77/Mido-77/main/pacman.svg)
 
 <div align="center">
 
