@@ -65,15 +65,13 @@ I'm passionate about uncovering the "why" behind how things work — from comple
 - 💭 Believe in the power of creative problem-solving
 
 
-## 🎮 Pacman Animation
+### 🎮 Pacman Arcade Game
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mido-77/Mido-77/output/pacman-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mido-77/Mido-77/output/pacman.svg">
-  <img alt="Pacman eating my contributions" src="https://raw.githubusercontent.com/Mido-77/Mido-77/output/pacman.svg">
-</picture>
+![Pacman Game Animation](https://raw.githubusercontent.com/Mido-77/Mido-77/output/pacman.svg)
 
-![Test](https://raw.githubusercontent.com/Mido-77/Mido-77/main/test.svg)
+*Classic arcade game animation*
+
+
 
 ### ⚡ **"Turning ideas into impactful solutions through code and creativity"**
 
