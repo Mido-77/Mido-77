@@ -73,7 +73,7 @@ I'm passionate about uncovering the "why" behind how things work — from comple
   <img alt="Pacman eating my contributions" src="https://raw.githubusercontent.com/Mido-77/Mido-77/output/pacman.svg">
 </picture>
 
-
+![Test](https://raw.githubusercontent.com/Mido-77/Mido-77/main/test.svg)
 
 ### ⚡ **"Turning ideas into impactful solutions through code and creativity"**
 
