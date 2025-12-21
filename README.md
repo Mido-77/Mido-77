@@ -67,11 +67,9 @@ I'm passionate about uncovering the "why" behind how things work — from comple
 
 ## 🎮 Pacman Animation
 
-![Pacman eating my contributions](https://raw.githubusercontent.com/Mido-77/Mido-77/main/github-metrics.svg)
-
-![Pacman](https://raw.githubusercontent.com/Mido-77/Mido-77/main/pacman.svg)
-
 <div align="center">
+  <img src="https://raw.githubusercontent.com/Mido-77/Mido-77/output/pacman.svg" alt="Pacman Animation" width="100%">
+</div>
 
 ### ⚡ **"Turning ideas into impactful solutions through code and creativity"**
 
