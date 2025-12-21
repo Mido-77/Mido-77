@@ -23,13 +23,12 @@ jobs:
       uses: abozanona/pacman-contribution-graph@main
       with:
         github_user_name: Mido-77
-        commit_count: 100
-        exclude_days: sat,sun
-        limit_day: 50
-        svg_width: 880
-        svg_height: 205
-        no_animations: false
-        theme: classic
+        # Remove all the extra parameters - they're causing warnings
+
+    - name: Move SVG files to root
+      run: |
+        mv dist/pacman-contribution-graph.svg ./pacman.svg
+        mv dist/pacman-contribution-graph-dark.svg ./pacman-dark.svg
 
     - name: Deploy to Output Branch
       uses: peaceiris/actions-gh-pages@v3
