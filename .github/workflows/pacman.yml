@@ -1,51 +1,60 @@
-name: Generate Pacman Animation
+name: Pacman Game Animation
 on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
 
 jobs:
-  generate-pacman:
+  update-pacman:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
     steps:
-    # Step 1: Checkout the repository
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-    
-    # Step 2: Generate the SVG files
-    - name: Generate Pacman SVG
-      run: |
-        curl -s -L "https://github-contributions-api.deno.dev/Mido-77.svg?animation=true" -o pacman.svg
-        curl -s -L "https://github-contributions-api.deno.dev/Mido-77.svg?animation=true&theme=dark" -o pacman-dark.svg
-        echo "Files generated:"
-        ls -la *.svg
-    
-    # Step 3: Create and push to output branch
-    - name: Push to Output Branch
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        
-        # Create output branch with only the SVG files
-        git checkout --orphan output 2>/dev/null || git checkout output
-        git rm -rf . || true
-        
-        # Copy the generated files
-        cp ../pacman.svg . || cp ../workspace/pacman.svg . || true
-        cp ../pacman-dark.svg . || cp ../workspace/pacman-dark.svg . || true
-        
-        # Ensure we have the files
-        ls -la
-        
-        git add -f *.svg
-        git commit -m "Update Pacman animation - $(date +'%Y-%m-%d %H:%M:%S')"
-        git push origin output --force
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+        with:
+          ref: output  # Work directly on the output branch
+      
+      - name: Generate Pacman Game SVG
+        run: |
+          # This creates an animated Pacman that eats dots (no relation to contributions)
+          cat > pacman.svg << 'EOF'
+          <svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
+            <style>
+              @keyframes eat {
+                0% { stroke-dashoffset: 0; }
+                100% { stroke-dashoffset: -100; }
+              }
+              @keyframes movePacman {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(300px); }
+              }
+              .pacman {
+                fill: #FF0;
+                animation: movePacman 4s linear infinite;
+              }
+              .dots {
+                stroke: #FFF;
+                stroke-width: 10;
+                stroke-dasharray: 0 20;
+                animation: eat 1s linear infinite;
+              }
+            </style>
+            <rect width="400" height="100" fill="#000"/>
+            <!-- Pacman -->
+            <path class="pacman" d="M50,50 L80,50 A30,30 0 1,0 50,80 Z"/>
+            <!-- Moving dots -->
+            <line class="dots" x1="100" y1="50" x2="350" y2="50"/>
+            <text x="10" y="90" fill="#FFF" font-size="12">PACMAN GAME</text>
+          </svg>
+          EOF
+          
+          # Create dark version
+          sed 's/#000/#111/g; s/#FFF/#EEE/g' pacman.svg > pacman-dark.svg
+      
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pacman.svg pacman-dark.svg
+          git commit -m "Update Pacman game animation" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
