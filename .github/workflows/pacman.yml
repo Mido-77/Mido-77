@@ -1,0 +1,41 @@
+name: Generate Pacman Animation
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight
+  workflow_dispatch:      # Allows manual run
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Generate Pacman SVG
+      uses: abozanona/pacman-contribution-graph@main
+      with:
+        github_user_name: Mido-77
+        commit_count: 100
+        exclude_days: sat,sun
+        limit_day: 50
+        svg_width: 880
+        svg_height: 205
+        no_animations: false
+        theme: classic
+
+    - name: Deploy to Output Branch
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        publish_branch: output
+        force_orphan: true
+        keep_files: false
