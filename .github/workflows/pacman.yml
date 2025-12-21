@@ -1,0 +1,51 @@
+name: Generate Pacman Animation
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  generate-pacman:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    # Step 2: Generate the SVG files
+    - name: Generate Pacman SVG
+      run: |
+        curl -s -L "https://github-contributions-api.deno.dev/Mido-77.svg?animation=true" -o pacman.svg
+        curl -s -L "https://github-contributions-api.deno.dev/Mido-77.svg?animation=true&theme=dark" -o pacman-dark.svg
+        echo "Files generated:"
+        ls -la *.svg
+    
+    # Step 3: Create and push to output branch
+    - name: Push to Output Branch
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Create output branch with only the SVG files
+        git checkout --orphan output 2>/dev/null || git checkout output
+        git rm -rf . || true
+        
+        # Copy the generated files
+        cp ../pacman.svg . || cp ../workspace/pacman.svg . || true
+        cp ../pacman-dark.svg . || cp ../workspace/pacman-dark.svg . || true
+        
+        # Ensure we have the files
+        ls -la
+        
+        git add -f *.svg
+        git commit -m "Update Pacman animation - $(date +'%Y-%m-%d %H:%M:%S')"
+        git push origin output --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
